@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noche Inolvidable</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="starCanvas"></canvas>
+
+    <section id="login-screen" class="full-screen-center">
+      <div class="login-card">
+        <h1>UMMMMM</h1>
+        <input type="text" id="passInput" />
+        <div class="actions">
+          <button onclick="verificar()">ENTRAR</button>
+          <a
+            href="https://symondsalazar.github.io/pistas_regalo/"
+            target="_blank"
+            class="pistas-link"
+            >Aqui esta la contraseña</a
+          >
+        </div>
+        <p id="error-msg"></p>
+      </div>
+    </section>
+
+    <section id="main-content" class="page-layout hidden">
+      <div id="phrase-overlay">
+        <h2 id="fade-phrase"></h2>
+      </div>
+
+      <div id="final-gift" class="hidden">
+        <div class="image-container">
+          <img src="cielo.png" alt="Mapa Estelar" class="pure-image" />
+        </div>
+
+        <div class="gift-text">
+          <h2 class="amor-title">Te amo mi amor</h2>
+          <div class="dedicatoria-box">
+            <p>Este es el hermoso cielo que observamos juntos</p>
+            <p>donde compartimos un momento inolvidable</p>
+            <p class="final-date">29 de agosto de 2025 a las 09:30</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+}
+
+/* --- Estilos del Login --- */
+.full-screen-center {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-card {
+  border: 1px solid #fff;
+  padding: 40px;
+  width: 320px;
+  background: #000;
+}
+
+h1 {
+  font-weight: 100;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.pistas-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+/* --- Estilos del Regalo Final con Borde y Animación --- */
+.page-layout {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrado verticalmente */
+  padding: 5vh 20px; /* Un poco de espacio a los lados */
+}
+
+#final-gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Ancho máximo del cuadro */
+  /* Borde blanco grueso estilo marco */
+
+  padding: 40px; /* Espacio interno entre el borde y el contenido */
+  background-color: #000;
+
+  /* Configuración inicial de la animación */
+  opacity: 0;
+  transform: translateY(30px); /* Empieza un poco más abajo */
+  transition:
+    opacity 2.5s ease-out,
+    transform 2.5s ease-out; /* Transición suave y larga */
+}
+
+/* Clase que activa la animación */
+#final-gift.visible {
+  opacity: 1;
+  transform: translateY(0); /* Vuelve a su posición original */
+}
+
+.image-container {
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pure-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 55vh;
+  display: block;
+}
+
+.gift-text {
+  text-align: center;
+}
+
+.amor-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.dedicatoria-box p {
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+.final-date {
+  font-weight: 600 !important;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+/* --- Animaciones y Utilidades --- */
+.hidden {
+  display: none !important;
+}
+
+#phrase-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 20;
+}
+
+#fade-phrase {
+  font-weight: 100;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  animation: fadeSequence 4s forwards;
+}
+
+@keyframes fadeSequence {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#error-msg {
+  color: red;
+  font-size: 0.7rem;
+  margin-top: 10px;
+}
